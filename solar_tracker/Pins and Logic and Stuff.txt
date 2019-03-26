@@ -1,0 +1,31 @@
+	|
+   A0	|   A1
+ t_left	| t_right
+________|________
+	|
+   A2	|   A3
+ b_left	| b_right
+	|
+
+t_left = A0
+t_right = A1
+b_left = A2
+b_right = A3
+
+tleft = value from A0
+tright = value from A1
+bleft = value from A2
+bright = value from A3
+
+top = (tleft + tright)/2
+bottom = (bleft + bright)/2
+left = (tleft + bleft)/2
+right = (tright + bright)/2
+
+if top > bottom:
+	move up, else move down or don't move
+if left > right:
+	move left, else move right or don't move
+
+Probably incorporate a filter to smooth out data from sensors
+Probably also a good idea to incorporate a buffer for the "don't move" region so it isn't twitchy
